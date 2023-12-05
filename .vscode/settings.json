@@ -40,11 +40,11 @@
   "breadcrumbs.enabled": true,
   "editor.renderControlCharacters": false,
   "editor.tabSize": 2,
-  "editor.renderLineHighlight": "gutter",
+  "editor.renderLineHighlight": "line",
   "editor.minimap.enabled": false,
   "editor.fontSize": 16,
   "editor.detectIndentation": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "editor.wordBasedSuggestions": false,
   "editor.suggest.localityBonus": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -188,6 +188,10 @@
     {
       "column": 90,
       "color": "#862b00"
+    },
+    {
+      "column": 0,
+      "color": "#2c2c47"
     },
     {
       "column": 120,
