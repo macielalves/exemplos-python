@@ -89,7 +89,8 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.shell.linux": "zsh",
   "terminal.external.linuxExec": "x-terminal-emulator",
-  "terminal.integrated.fontFamily": "'Hack NF', 'Operator Mono Lig Book', 'Fira Code', 'SF Mono', Consolas, 'Source Code Pro', 'Dank Mono', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+  // "terminal.integrated.fontFamily": "'Hack NF', 'Operator Mono Lig Book', 'Fira Code', 'SF Mono', Consolas, 'Source Code Pro', 'Dank Mono', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font', monospace",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.env.linux": {
