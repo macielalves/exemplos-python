@@ -19,8 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-admin.site.site_header = "Espaço do Administrador"
-admin.site.site_title = "Adm"
+admin.site.site_header = "Área do administrador"
 
 
 urlpatterns = [
