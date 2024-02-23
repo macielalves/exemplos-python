@@ -21,7 +21,7 @@
   // Workbench
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "a-file-icon-vscode",
   "workbench.editor.enablePreview": false,
   "workbench.sideBar.location": "left",
   "window.menuBarVisibility": "toggle",
@@ -45,7 +45,7 @@
   "editor.fontSize": 16,
   "editor.detectIndentation": true,
   "editor.snippetSuggestions": "inline",
-  "editor.wordBasedSuggestions": false,
+  "editor.wordBasedSuggestions": "off",
   "editor.suggest.localityBonus": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.formatOnPaste": false,
@@ -55,13 +55,13 @@
   "editor.mouseWheelZoom": true,
   "editor.linkedEditing": true,
   "editor.fontFamily": "'Hack Nerd Font Mono', monospace",
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": false, // barra de pontos de interrupção
   "editor.fontLigatures": true,
   "editor.defaultFormatter": "ms-python.black-formatter",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
   },
   "editor.suggestSelection": "first",
   // Git
