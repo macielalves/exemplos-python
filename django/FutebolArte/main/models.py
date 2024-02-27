@@ -83,9 +83,7 @@ class Competicao(models.Model):
 
 class TituloCompeticao(models.Model):
     clube = models.ForeignKey(ClubeTime, on_delete=models.CASCADE)
-    competicao = models.ForeignKey(
-        Competicao, on_delete=models.CASCADE, verbose_name="Competição"
-    )
+    competicao = models.ForeignKey(Competicao, on_delete=models.CASCADE)
     ano_conquista = models.PositiveIntegerField(
         "Ano da Conquista", default=datetime.now().year
     )
@@ -97,4 +95,5 @@ class TituloCompeticao(models.Model):
     )
 
     class Meta:
+        verbose_name = "Título de Competição"
         verbose_name_plural = "Título de Competições"

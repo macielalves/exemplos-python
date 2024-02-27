@@ -19,9 +19,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-admin.site.site_header = "Área do administrador"
-
-
 urlpatterns = [
     path("", include("main.urls")),
     path("user/admin/", admin.site.urls),

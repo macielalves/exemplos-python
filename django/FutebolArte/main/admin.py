@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Jogador, ClubeTime, Competicao, TituloCompeticao
 
 
-class JogadorInline(admin.StackedInline):
+class JogadorInline(admin.TabularInline):
     model = Jogador
 
 
@@ -19,5 +19,5 @@ class ClubeTimeAdmin(admin.ModelAdmin):
 class CompeticaoAdmin(admin.ModelAdmin): ...
 
 
-admin.site.register(Jogador)
-admin.site.register(TituloCompeticao)
+# admin.site.register(Jogador)
+# admin.site.register(TituloCompeticao)

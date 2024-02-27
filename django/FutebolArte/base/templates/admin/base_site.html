@@ -1,0 +1,10 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+{% static 'custom/css/base.css' %}
+{% endblock %}
+
+{% block dark-mode-vars %}
+  <script src="{% static "admin/js/theme.js" %}" defer></script>
+{% endblock %}

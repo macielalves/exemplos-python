@@ -64,8 +64,12 @@ SECRET_KEY = os.getenv("SECRET_KEY", os.environ["SECRET_KEY"])
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "futebol_arte_db",
+        "USER": "postgres",
+        "PASSWORD": os.environ["POSTGRES_KEY"],
+        "HOST": "localhost",
+        "PORT": "7045",
     }
 }
 
