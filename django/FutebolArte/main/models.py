@@ -1,18 +1,28 @@
 from datetime import datetime
 from django.db import models
+from common.models import Cidade
+
+
+DIVISAO_CHOICES = (
+    ("A", "Série A"),
+    ("B", "Série B"),
+    ("C", "Série C"),
+    ("D", "Série D"),
+    ("S", "Sem Série"),
+)
+
+MODALIDADE_CHOICES = (("M", "Masculino"), ("F", "Feminino"))
 
 
 class Jogador(models.Model):
     nome = models.CharField(max_length=255)
-    foto = models.ImageField(upload_to="img/gamer")
+    foto = models.ImageField(upload_to="jogadores")
     clube = models.OneToOneField(
-        "ClubeTime", on_delete=models.SET_NULL, blank=True, null=True
+        "ClubeTime", on_delete=models.CASCADE, blank=True, null=True
     )
     posicao_principal = models.CharField(max_length=255)
     numero_camisa = models.PositiveIntegerField(default=1)
-    sexo = models.CharField(
-        max_length=1, choices={"M": "Masculino", "F": "Feminino"}, default="M"
-    )
+    sexo = models.CharField(max_length=1, choices=MODALIDADE_CHOICES, default="M")
 
     class Meta:
         verbose_name_plural = "Jogadores"
@@ -26,23 +36,16 @@ class ClubeTime(models.Model):
     ano_fund = models.PositiveIntegerField("Ano de Fundação")
     divisao_atual = models.CharField(
         max_length=1,
-        choices=(
-            ("A", "Serie A"),
-            ("B", "Serie B"),
-            ("C", "Serie C"),
-            ("D", "Serie D"),
-        ),
-        default="A",
+        choices=DIVISAO_CHOICES,
+        default="S",
     )
-    escudo_clube = models.ImageField("Escudo", upload_to="img/shell")
-    cidade = models.CharField(max_length=255)
+    escudo_clube = models.ImageField("Escudo", upload_to="escudos")
+    cidade = models.ForeignKey(Cidade, on_delete=models.SET_NULL, null=True, blank=True)
     uf = models.CharField(max_length=255)
     pais = models.CharField("País", max_length=255)
-    categoria = models.CharField(
-        max_length=1, choices=(("M", "Masculino"), ("F", "Feminino")), default="M"
-    )
+    categoria = models.CharField(max_length=1, choices=MODALIDADE_CHOICES, default="M")
     jogadores = models.ForeignKey(
-        Jogador, on_delete=models.SET_NULL, blank=True, null=True
+        Jogador, on_delete=models.CASCADE, blank=True, null=True
     )
     titulos = models.ForeignKey(
         "TituloCompeticao", on_delete=models.CASCADE, blank=True, null=True

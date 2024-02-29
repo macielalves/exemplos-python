@@ -7,9 +7,12 @@ from .models import Pais, Estado, Cidade
 class PaisAdmin(admin.ModelAdmin): ...
 
 
+class CidadeInline(admin.TabularInline):
+    model = Cidade
+    extra = 0
+
+
 @admin.register(Estado)
-class EstadoAdmin(admin.ModelAdmin): ...
-
-
-@admin.register(Cidade)
-class CidadeAdmin(admin.ModelAdmin): ...
+class EstadoAdmin(admin.ModelAdmin):
+    list_display = ["nome"]
+    inlines = [CidadeInline]

@@ -30,6 +30,7 @@ class Estado(models.Model):
 class Cidade(models.Model):
     nome = models.CharField("Nome da cidade", max_length=255)
     populacao = models.PositiveBigIntegerField("População")
+    estado = models.ForeignKey(Estado, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = "Cidade"
