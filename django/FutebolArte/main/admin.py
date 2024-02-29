@@ -33,8 +33,9 @@ class ClubeTimeAdmin(admin.ModelAdmin):
     @admin.display(description="Escudo")
     def escudo_img(self, obj):
         url = "https://placehold.co/60"
-        if obj.escudo:
-            url = obj.escudo.url
+        if obj.escudo_clube:
+            url = obj.escudo_clube.url
+            print(url)
 
         return format_html(f'<img src="{url}" width="60" />')
 
