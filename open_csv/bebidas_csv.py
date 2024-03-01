@@ -8,12 +8,8 @@ class OpenCsv:
         ...
 
     def _load_csv(self):
-        data = []
         with open(self.filename, "r", encoding="utf-8") as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                data.append(row)
-        return data
+            return list(csv.DictReader(file))
 
 
 class RelatorioBebidas(OpenCsv):
