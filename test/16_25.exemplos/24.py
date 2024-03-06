@@ -8,8 +8,14 @@ def encontrar_elemento_repetido(numeros):
     return r[r_max]
 
 
-print(
-    encontrar_elemento_repetido(
-        [1, 1, 2, 2, 3, 3, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 4, 23, 2, 54, 9]
-    )
-)
+while True:
+    try:
+        # lista_ = list(
+        #     int(input("add_num: "))
+        #     for _ in range(int(input("\nQuantidade de números: ")))
+        # )
+        lista_ = [6, 5, 4, 3, 3, 2, 1]
+        print(encontrar_elemento_repetido(lista_))
+        break
+    except Exception as err:
+        raise err

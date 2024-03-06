@@ -5,4 +5,10 @@ def remover_vogais(s: str):
     return "".join(["" if c.lower() in "aeiou" else c for c in s])
 
 
-print(remover_vogais("Author: Maciel Aves; Email: macielalves.dev@gmail.com"))
+while True:
+    try:
+        s = input("\nDigite um texto/frase: ")
+        print('Sem vogais:\n\t"%s"' % remover_vogais(s))
+        break
+    except Exception as err:
+        raise err

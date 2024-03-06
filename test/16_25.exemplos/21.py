@@ -1,5 +1,5 @@
-def contar_substring(string, substring):
-    return string.count(substring)
+def contar_substring(s, sb):
+    return sum(1 if s[j - len(sb) : j] == sb else 0 for j in range(len(sb), len(s) + 1))
 
 
 while True:
