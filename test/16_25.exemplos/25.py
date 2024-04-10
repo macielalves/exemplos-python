@@ -1,6 +1,6 @@
 def verificar_quadrado_perfeito(n: int):
-    aux = (n) ** (1 / 2)
-    return False if int((aux - int(aux)) * 10) else True
+    aux = n**0.5
+    return False if aux - int(aux) else True
 
 
 while True:
